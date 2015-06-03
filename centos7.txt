@@ -85,6 +85,8 @@ SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{type}=="1", KERNEL=="eth0",
 SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{type}=="1", KERNEL=="eth1", NAME="eth1"
 EOF
 
+# timezone above in this kickstart script did not work.
+/usr/bin/timedatectl set-timezone America/Los_Angeles
 
 /usr/bin/yum clean all
 /usr/bin/yum makecache
