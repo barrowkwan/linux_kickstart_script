@@ -82,10 +82,6 @@ SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{type}=="1", KERNEL=="eth0",
 SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{type}=="1", KERNEL=="eth1", NAME="eth1"
 EOF
 
-wget  -P /tmp https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chef-12.4.1-1.el6.x86_64.rpm
-rpm -Uvh /tmp/chef-12.4.1-1.el6.x86_64.rpm
-rm -rf /tmp/chef-12.4.1-1.el6.x86_64.rpm
-
 /usr/bin/yum clean all
 /usr/bin/yum makecache
 /usr/bin/yum update -y --skip-broken
