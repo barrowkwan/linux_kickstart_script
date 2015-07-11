@@ -3,6 +3,7 @@ text
 cdrom
 lang en_US.UTF-8
 timezone America/Los_Angele 
+keyboard us
 shutdown
 
 # rootpw is vagrant
